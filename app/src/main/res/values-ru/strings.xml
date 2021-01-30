@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Taza aua</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="air_quality_status_good">Хороший</string>
+    <string name="air_quality_status_moderate">Умеренный</string>
+    <string name="air_quality_status_unhealthy_sensitive">Нездоровый для чувствительных групп насаления</string>
+    <string name="air_quality_status_unhealthy">Нездоровый</string>
+    <string name="air_quality_status_very_unhealthy">Очень нездоровый</string>
+    <string name="air_quality_status_hazardous">Опасный</string>
+</resources>

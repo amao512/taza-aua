@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+
+    <solid android:color="@color/colorVeryUnhealthy" />
+
+    <corners android:radius="@dimen/card_radius_size" />
+
+    <padding
+        android:bottom="@dimen/padding_size_16x"
+        android:left="@dimen/padding_size_16x"
+        android:right="@dimen/padding_size_16x"
+        android:top="@dimen/padding_size_16x"
+        />
+</shape>

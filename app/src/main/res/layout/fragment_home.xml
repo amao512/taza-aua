@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLight"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/padding_size_16x"
+    tools:context=".home.presentation.HomeFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_home_air_quality_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_16x"
+        android:background="@drawable/bg_good_quality_card"
+        >
+
+        <TextView
+            android:id="@+id/fragment_home_city_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/fragment_home_weather_temperature"
+            app:layout_constraintStart_toStartOf="@id/fragment_home_air_quality_card"
+            app:layout_constraintTop_toTopOf="@id/fragment_home_air_quality_card"
+            tools:text="Taraz"
+            />
+
+        <TextView
+            android:id="@+id/fragment_home_city_state_and_country_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16x"
+            app:layout_constraintEnd_toEndOf="@id/fragment_home_city_name"
+            app:layout_constraintStart_toStartOf="@id/fragment_home_city_name"
+            app:layout_constraintTop_toBottomOf="@id/fragment_home_city_name"
+            tools:text="Zhambyl, Kazakhstan"
+            />
+
+        <TextView
+            android:id="@+id/fragment_home_weather_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_size_10x"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20x"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_home_weather_image"
+            app:layout_constraintEnd_toStartOf="@id/fragment_home_weather_image"
+            app:layout_constraintTop_toTopOf="@id/fragment_home_weather_image"
+            tools:text="-7777°C"
+            />
+
+        <ImageView
+            android:id="@+id/fragment_home_weather_image"
+            android:layout_width="@dimen/weather_icon_size"
+            android:layout_height="@dimen/weather_icon_size"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_home_city_state_and_country_name"
+            app:layout_constraintEnd_toEndOf="@id/fragment_home_air_quality_card"
+            app:layout_constraintTop_toTopOf="@id/fragment_home_city_name"
+            tools:src="@drawable/ic_cloudy"
+            />
+
+        <TextView
+            android:id="@+id/fragment_home_air_quality_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="34dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_54x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/fragment_home_air_quality_card"
+            app:layout_constraintStart_toStartOf="@id/fragment_home_air_quality_card"
+            app:layout_constraintTop_toBottomOf="@id/fragment_home_weather_image"
+            tools:text="173"
+            />
+
+        <TextView
+            android:id="@+id/fragment_home_air_quality_status_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24x"
+            app:layout_constraintEnd_toEndOf="@id/fragment_home_air_quality_index"
+            app:layout_constraintStart_toStartOf="@id/fragment_home_air_quality_index"
+            app:layout_constraintTop_toBottomOf="@id/fragment_home_air_quality_index"
+            tools:text="Unhealthy"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/fragment_home_air_quality_card"
+            app:layout_constraintStart_toStartOf="@id/fragment_home_air_quality_card"
+            app:layout_constraintTop_toBottomOf="@id/fragment_home_air_quality_status_name"
+            tools:text="Wear a mask outdoors"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_home_cities_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_16x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_home_air_quality_card"
+        />
+
+</LinearLayout>
